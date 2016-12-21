@@ -14,6 +14,6 @@ accuracy of their choices.
 - CSS3
 
 ###Future Features
--[ ] About Page
--[ ] "cannot click" animations
--[ ] Different character, different animations on match
+1. About Page
+2. "cannot click" animations
+3. Different character, different animations on match
