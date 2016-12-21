@@ -134,23 +134,33 @@ function createGameArea(deck)
     shuffle(deck, cardsInDeck);//shuffle the deck of images before setting up
 
     //Loop the length of deckOfTwoEach array. i takes value of j at end of nested loop
-    for(var i = 0; i <= cardsInDeck; i)
-    {
-        var $newRow = $("<div>").addClass("row card-row");//new card row
-        //create 6 column of cards with fronts and backs. i passes j starting value.
-        for(var j = i; j < i + cardPerRow; j++)
-        {
-            var $cardBox = $("<div>").addClass("col-sm-2 card-col");//column/container for card
-            var $newCard = $("<div>").addClass("card");
-            var $frontImg = $("<img>").addClass("front").attr("src", deckOfTwoEach[j]);
-            var $backImg = $("<img>").addClass("back").attr("src", cardBackImg);
+    // for(var i = 0; i <= cardsInDeck; i)
+    // {
+    //     var $newRow = $("<div>").addClass("row card-row");//new card row
+    //     //create 6 column of cards with fronts and backs. i passes j starting value.
+    //     for(var j = i; j < i + cardPerRow; j++)
+    //     {
+    //         var $cardBox = $("<div>").addClass("col-sm-2 card-col");//column/container for card
+    //         var $newCard = $("<div>").addClass("card");
+    //         var $frontImg = $("<img>").addClass("front").attr("src", deckOfTwoEach[j]);
+    //         var $backImg = $("<img>").addClass("back").attr("src", cardBackImg);
+    //
+    //         $newCard.append($frontImg, $backImg);
+    //         $cardBox.append($newCard);
+    //         $newRow.append($cardBox);
+    //     }
+    //     i = j;//outer loop start where nested left off
+    //     $("#game-area").append($newRow);
+    // }
+    for(var i = 0; i <= cardsInDeck; i++){
+        var $cardBox = $("<div>").addClass("col-sm-4 col-md-2 card-col");//column/container for card
+        var $newCard = $("<div>").addClass("card");
+        var $frontImg = $("<img>").addClass("front").attr("src", deckOfTwoEach[i]);
+        var $backImg = $("<img>").addClass("back").attr("src", cardBackImg);
 
-            $newCard.append($frontImg, $backImg);
-            $cardBox.append($newCard);
-            $newRow.append($cardBox);
-        }
-        i = j;//outer loop start where nested left off
-        $("#game-area").append($newRow);
+        $newCard.append($frontImg, $backImg);
+        $cardBox.append($newCard);
+        $("#game-area").append($cardBox);
     }
 
 }
