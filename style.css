@@ -14,6 +14,10 @@ body{
     width: auto;
     display: block ;
 }
+#aboutDescript{
+    width: 40vw;
+    background-color: rgba(0,0,0,0.7);
+}
 #main-row{
     height: 75vh;
 }
